@@ -1,24 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Count" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kirakira" translatesAutoresizingMaskIntoConstraints="NO" id="1s0-Q9-igX">
+                                <rect key="frame" x="-772.5" y="-206.5" width="1920" height="1080"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mirror_ball" translatesAutoresizingMaskIntoConstraints="NO" id="y5V-6n-7wX">
+                                <rect key="frame" x="-19.796118103087679" y="-278.9999999999917" width="414" height="279"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2N-7G-vbE">
+                                <rect key="frame" x="137.5" y="467" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.91796646904699586" green="0.91796646904699586" blue="0.91796646904699586" alpha="0.39805156681813353" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="3xp-GB-f65"/>
+                                    <constraint firstAttribute="height" constant="100" id="SPd-WD-7HH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="80"/>
+                                <size key="titleShadowOffset" width="3" height="3"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" systemColor="tintColor"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="plus" destination="BYZ-38-t0r" eventType="touchUpInside" id="F6b-z8-TCt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tM-zb-c6I">
+                                <rect key="frame" x="87.5" y="283.5" width="200" height="100"/>
+                                <color key="backgroundColor" white="0.84087782639723563" alpha="0.40254180285395408" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Imj-2b-Lq7"/>
+                                    <constraint firstAttribute="width" constant="200" id="XoM-y4-NzZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="50"/>
+                                <color key="textColor" systemColor="tintColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="3" height="3"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                        <constraints>
+                            <constraint firstItem="p2N-7G-vbE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="bottom" constant="-150" id="UvE-r9-XZ8"/>
+                            <constraint firstItem="1s0-Q9-igX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X6O-em-9Im"/>
+                            <constraint firstItem="1s0-Q9-igX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gIn-h3-akY"/>
+                            <constraint firstItem="6tM-zb-c6I" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kQc-nN-vee"/>
+                            <constraint firstItem="p2N-7G-vbE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sU3-8a-ALl"/>
+                            <constraint firstItem="6tM-zb-c6I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wWB-tv-1MF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="kirakiraImage" destination="1s0-Q9-igX" id="dgl-BJ-W02"/>
+                        <outlet property="label" destination="6tM-zb-c6I" id="1iO-nb-Pkg"/>
+                        <outlet property="mirrorImage" destination="y5V-6n-7wX" id="Qcy-6m-Trc"/>
+                        <outlet property="plusButton" destination="p2N-7G-vbE" id="QF5-7V-XDz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-66.400000000000006" y="138.0809595202399"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="kirakira" width="1920" height="1080"/>
+        <image name="mirror_ball" width="714" height="712"/>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
